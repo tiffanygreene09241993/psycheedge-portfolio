@@ -1,31 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>PsychEdge Solutions | Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsychEdge Solutions | Legal-Tech & Investigative Frameworks</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate950: '#020617',
+                        slate900: '#0f172a',
+                        slate800: '#1e293b',
+                        amber500: '#f59e0b',
+                        amber600: '#d97706',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.15);
+        }
+        .glow-card:hover {
+            box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.25);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate950 text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-slate-950">
 
-<header>
-  <h1>PsychEdge Solutions</h1>
-</header>
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-shield-halved text-slate-950 text-xl font-bold"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight block">PsychEdge Solutions</span>
+                    <span class="text-xs text-amber-500 font-medium uppercase tracking-widest">RegTech & Edge Systems</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#products" class="hover:text-amber-500 transition-colors">Products</a>
+                <a href="#architecture" class="hover:text-amber-500 transition-colors">Architecture</a>
+                <a href="#security" class="hover:text-amber-500 transition-colors">Security</a>
+            </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com/tiffanygreene09241993" target="_blank" rel="noopener noreferrer" 
+                   class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200 hover:border-amber-500/50 hover:text-amber-500 transition-all">
+                    <i class="fa-brands fa-github text-base"></i>
+                    <span>GitHub Profile</span>
+                </a>
+                <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-amber-500 p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
 
-<section>
-  <h2>Academic & Professional Portfolio</h2>
-  <p>Welcome to the official academic and professional portfolio of Tiffany Greene. This site highlights academic work, professional development, strategic planning projects, and applied criminal psychology insights completed through PsychEdge Solutions.</p>
-</section>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate900 border-b border-slate-800 px-4 py-4 space-y-3">
+            <a href="#products" class="block text-slate-300 hover:text-amber-500 py-1 font-medium">Products</a>
+            <a href="#architecture" class="block text-slate-300 hover:text-amber-500 py-1 font-medium">Architecture</a>
+            <a href="#security" class="block text-slate-300 hover:text-amber-500 py-1 font-medium">Security</a>
+            <a href="https://github.com/tiffanygreene09241993" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-amber-500 py-1 font-medium pt-2 border-t border-slate-800">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub Profile</span>
+            </a>
+        </div>
+    </header>
 
-<footer>
-  © 2026 PsychEdge Solutions
-</footer>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-20 pb-28 lg:pt-32 lg:pb-36 border-b border-slate-900">
+        <!-- Background Glow Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none"></div>
 
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-semibold tracking-wider uppercase mb-8">
+                <i class="fa-solid fa-bolt text-xs"></i>
+                <span>Next-Generation Legal Intelligence</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-100 mb-6 leading-tight">
+                PsychEdge Solutions
+            </h1>
+            
+            <p class="text-xl sm:text-2xl font-semibold text-amber-500/90 mb-6 tracking-tight">
+                Intelligent Legal-Tech & Investigative Frameworks at the Edge
+            </p>
+            
+            <p class="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Building secure, high-performance digital tools for case diagnostics, zero-retention emergency routing, and structured investigative workflows.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold hover:from-amber-400 hover:to-amber-500 transition-all shadow-lg shadow-amber-500/25 flex items-center justify-center space-x-2">
+                    <span>Explore Products</span>
+                    <i class="fa-solid fa-arrow-down text-sm"></i>
+                </a>
+                <a href="https://github.com/tiffanygreene09241993" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 font-bold hover:bg-slate-800 hover:border-slate-700 transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-github text-lg"></i>
+                    <span>View GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid Section -->
+    <section id="products" class="py-24 bg-slate950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-500 uppercase tracking-widest mb-3">Enterprise Software Suite</h2>
+                <p class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-100">Core Platforms & Tools</p>
+                <p class="text-slate-400 mt-3 text-base">Engineered with TypeScript and deployed on edge infrastructure for maximum reliability and privacy.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Product 1: CogniVault -->
+                <div class="glow-card bg-slate900/60 border border-slate-800/80 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 text-xl font-bold mb-6">
+                            <i class="fa-solid fa-vault"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-100 mb-3">CogniVault</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Secure research and analytical workflow stress-testing application built with TypeScript for encrypted state management and high-precision data organization.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-amber-500/90 bg-amber-500/10 px-2.5 py-1 rounded-md">TypeScript / Edge</span>
+                        <a href="https://github.com/tiffanygreene09241993/CogniVault" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-300 hover:text-amber-500 flex items-center space-x-1.5 transition-colors">
+                            <span>Repository</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2: AETHER-0 -->
+                <div class="glow-card bg-slate900/60 border border-slate-800/80 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 text-xl font-bold mb-6">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-100 mb-3">AETHER-0</h3>
+                        <p class="text-slate-300 text-xs font-semibold mb-2 uppercase tracking-wider text-amber-500/80">Borderless Emergency Handoff Router</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Edge-native routing and state-transfer application engineered for zero-latency, secure operational handoffs across decentralized nodes.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-amber-500/90 bg-amber-500/10 px-2.5 py-1 rounded-md">Zero-Latency Router</span>
+                        <a href="https://github.com/tiffanygreene09241993/AETHER-0-Borderless-Emergency-Handoff-Router" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-300 hover:text-amber-500 flex items-center space-x-1.5 transition-colors">
+                            <span>Repository</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Forensic Evidence Dossier Portal -->
+                <div class="glow-card bg-slate900/60 border border-slate-800/80 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 text-xl font-bold mb-6">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-100 mb-3">Forensic Evidence Dossier Portal</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Structured digital environment designed for evidentiary tracking, secure document organization, and protective order workflow management.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-amber-500/90 bg-amber-500/10 px-2.5 py-1 rounded-md">RegTech / Dossier</span>
+                        <a href="https://github.com/tiffanygreene09241993/Forensic-Evidence-Dossier-Protective-Order-Portal" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-300 hover:text-amber-500 flex items-center space-x-1.5 transition-colors">
+                            <span>Repository</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture & Security Section -->
+    <section id="architecture" class="py-24 bg-slate900/50 border-t border-b border-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-500 text-xs font-semibold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>Infrastructure & Performance</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-100 mb-6">
+                        Built for Edge Execution & Absolute Privacy
+                    </h2>
+                    <p class="text-slate-400 text-base leading-relaxed mb-8">
+                        PsychEdge Solutions architectures leverage cutting-edge cloud primitives to guarantee uninterrupted availability, zero data retention on origin servers, and instantaneous global response times.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-code text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-200 font-semibold mb-1">TypeScript Native Stack</h4>
+                                <p class="text-slate-400 text-sm">Strict type safety, modular design patterns, and enterprise-grade maintainability across all applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-bolt text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-200 font-semibold mb-1">Cloudflare Workers & Pages</h4>
+                                <p class="text-slate-400 text-sm">Global distribution eliminating regional bottlenecks, ensuring sub-50ms execution times worldwide.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4" id="security">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-shield text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-200 font-semibold mb-1">Zero-Retention Privacy</h4>
+                                <p class="text-slate-400 text-sm">Ephemeral processing models and encrypted state handoffs that safeguard sensitive client and case data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terminal / Architecture Visual Box -->
+                <div class="bg-slate950 border border-slate-800 rounded-2xl p-6 shadow-2xl relative">
+                    <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800/80">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        </div>
+                        <span class="text-xs font-mono text-slate-500">psychedgesolutions-node-v2.6.ts</span>
+                    </div>
+                    <pre class="font-mono text-xs text-amber-400/90 overflow-x-auto leading-relaxed p-2"><code><span class="text-slate-500">// PsychEdge Secure Edge Runtime Protocol</span>
+import { EdgeRouter, EncryptedState } from '@psychedge/core';
+
+export default {
+  async fetch(request: Request): Promise<Response> {
+    const session = await EdgeRouter.verifySession(request);
+    
+    if (!session.isValid) {
+      return new Response('Unauthorized Access', { status: 403 });
+    }
+
+    // Zero-retention dispatch
+    return EncryptedState.routeOrchestratedPayload(session, {
+      ttl: 0,
+      encryptionLevel: 'AES-GCM-256'
+    });
+  }
+};</code></pre>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate950 border-t border-slate-900 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 font-bold">
+                    <i class="fa-solid fa-shield-halved text-sm"></i>
+                </div>
+                <span class="text-sm font-semibold text-slate-300">PsychEdge Solutions © 2026. All rights reserved.</span>
+            </div>
+            
+            <div class="flex items-center space-x-6 text-sm text-slate-400">
+                <a href="https://github.com/tiffanygreene09241993" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition-colors flex items-center space-x-1.5">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub Organization</span>
+                </a>
+                <a href="#products" class="hover:text-amber-500 transition-colors">Products</a>
+                <a href="#architecture" class="hover:text-amber-500 transition-colors">Architecture</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
