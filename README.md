@@ -1,60 +1,34 @@
-PsychEdge Solutions — Academic & Professional Portfolio Website
-This repository contains the source files for Tiffany Greene’s academic and professional portfolio website. The site showcases a curated collection of academic work, research interests, professional projects, and strategic development initiatives completed through PsychEdge Solutions.
+# PsychEdge Solutions — Product Portfolio
 
-The portfolio is designed as a clean, fast, and accessible static website built with HTML and CSS, deployed through Cloudflare Pages for reliable global delivery.
+Modern single-page portfolio showcasing PsychEdge Solutions' legal-tech and investigative platforms.
 
-Purpose
-This portfolio serves as a centralized, public-facing space for:
+**Live focus:** CogniVault, AETHER-0 Borderless Emergency Handoff Router, and the Forensic Evidence Dossier Portal.
 
-Academic projects and coursework in Criminal Justice and Criminal Psychology
+## Stack
+- Static HTML with Tailwind CSS (CDN)
+- Inter font + Font Awesome icons
+- Dark slate / amber theme optimized for edge systems branding
+- Mobile-responsive with sticky header and smooth scroll
 
-Professional development work, including strategic planning and digital systems design
-
-Research interests, reflective writing, and applied behavioral insights
-
-Organizational and consulting projects completed under PsychEdge Solutions
-
-Long-term career documentation and graduate school preparation
-
-Site Structure
-Code
+## Structure
+```
 psycheedge-portfolio/
-│
-├── index.html          # Home / Overview
-├── about.html          # Academic + Professional Biography
-├── services.html       # Professional competencies & project areas
-├── contact.html        # Contact information
-│
+├── index.html          # Single-page product showcase (current)
+├── about.html          # Legacy academic bio (optional)
+├── services.html       # Legacy projects page (optional)
+├── contact.html        # Legacy contact (optional)
 └── assets/
-    └── style.css       # Global styling and layout
-Key Features
-Multi-page static website optimized for clarity and professionalism
+    └── style.css       # Legacy stylesheet
+```
 
-Academic and professional branding aligned with PsychEdge Solutions
+## Deployment
+Intended for Cloudflare Pages or GitHub Pages:
+- Connect this repository
+- No build step required
+- Output directory: `/`
+- Suggested custom domains: `psycheedge-solutions.net`, `www.psycheedge-solutions.net`
 
-Lightweight HTML/CSS for fast loading and easy maintenance
-
-Responsive layout suitable for desktop and mobile
-
-Cloudflare Pages deployment for secure, high-performance hosting
-
-Deployment
-This portfolio is intended to be deployed using Cloudflare Pages:
-
-Connect this repository to Cloudflare Pages
-
-Use default build settings (no build command required)
-
-Set the output directory to /
-
-Add custom domains:
-
-psycheedge-solutions.net
-
-www.psycheedge-solutions.net
-
-Author
+## Author
 Tiffany Greene  
-Criminal Justice (B.S.) — Criminal Psychology Concentration
-Public Administration Minor
-Founder, PsychEdge Solutions
+Founder, PsychEdge Solutions  
+[GitHub](https://github.com/tiffanygreene09241993)
