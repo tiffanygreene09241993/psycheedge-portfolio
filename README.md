@@ -2,7 +2,7 @@
 
 Modern single-page portfolio showcasing PsychEdge Solutions' legal-tech and investigative platforms.
 
-**Live focus:** CogniVault, AETHER-0 Borderless Emergency Handoff Router, and the Forensic Evidence Dossier Portal.
+**Live focus:** CogniVault, AETHER-0 Borderless Emergency Handoff Router (live: https://aether-0.lovable.app), Aegis Academic OS, AGENT WARROOM, and the PSLF Federal Student Loan Counselor.
 
 ## Stack
 - Static HTML with Tailwind CSS (CDN)
